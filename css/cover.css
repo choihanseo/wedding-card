@@ -18,6 +18,19 @@
   font-family: 'DancingScript-b';
   src: url('../font/DancingScript-Bold.ttf') format('truetype');
 }
+@font-face {
+  font-family: 'KyoboHandwriting2020pdy';
+  src: url('../font/KyoboHandwriting2020pdy.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'KimNamyun';
+  src: url('../font/KimNamyun.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Cafe24Oneprettynight';
+  src: url('../font/Cafe24Oneprettynight.ttf') format('truetype');
+}
 
 /* Links */
 a,
@@ -41,16 +54,34 @@ a:hover {
   margin-bottom: 1em;
   color: #333;
   text-shadow: none;
-  font-family: NanumMyeongjo-b;
+  font-family: KimNamyun;
   font-size: 1.7rem;
+
 }
 
 .top-title-sub{
   margin-top: 1em;
   color: #333;
   text-shadow: none;
-  font-family: NanumMyeongjo-b;
+  font-family: KimNamyun;
   font-size: 1.2rem;
+}
+
+.top-title-sub-custom{
+  margin-top: 0.5em;
+  color: #333;
+  text-shadow: none;
+  font-family: KimNamyun;
+  font-size: 1.7rem;
+}
+
+.top-title-sub-cafe-custom{
+  margin-top: 0.5em;
+  color: #333;
+  text-shadow: none;
+  font-family: Cafe24Oneprettynight;
+  font-size: 1.7rem;
+  font-weight: bold;
 }
 
 
@@ -149,6 +180,7 @@ body {
 .cover-heading {
   margin-top: 7.5rem;
   color: #fefefe;
+  /* font-family: NanumMyeongjo-b; */
   font-family: NanumMyeongjo-b;
 }
 
@@ -188,6 +220,13 @@ header {
   line-height: 2em;
   font-size: 1.2rem;
 }
+.section1-main-custom {
+  background-color: #fefefe;
+  font-family: Cafe24Oneprettynight;
+  line-height: 2em;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
 
 .section1-sub {
   font-family: NanumMyeongjo-b;
@@ -199,6 +238,25 @@ header {
   font-family: NanumMyeongjo-b;
   line-height: 2.1em;
   font-size: 1.35rem;
+}
+
+
+.section1-sub-custom {
+  font-family: Cafe24Oneprettynight;
+  line-height: 2.1em;
+  font-size: 1.35rem;
+}
+
+.section1-sub2-custom {
+  font-family: KimNamyun;
+  line-height: 2.1em;
+  font-size: 1.55rem;
+  font-weight: bold;
+}
+.section1-sub2-custom .small {
+  font-size: 1.2rem;
+  font-weight: bold;
+
 }
 
 .section1-sub2 .small {

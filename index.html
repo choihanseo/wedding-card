@@ -7,11 +7,10 @@
         content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,target-densitydpi=medium-dpi">
     <meta name="description" content="최한서 ❤️ 권지은 결혼식에 초대합니다.">
     <meta name="author" content="hanseo Choi">
-    <!-- <meta name="generator" content="Jekyll v4.1.1"> -->
-    <meta property="og:url" content="https://marry-me-jieun.github.io/wedding-card/" />
+    <meta name="generator" content="Jekyll v4.1.1">
+    <meta property="og:url" content="https://marry-me-jieun.github.io/" />
     <meta property="og:title" content="최한서 ❤️ 권지은 결혼식에 초대합니다." />
     <meta property="og:type" content="website" />
-    <!-- <meta property="og:image" content="https://marry-me-jieun.github.io/wedding-card/img/header.jpg" /> -->
     <meta property="og:image" content="https://marry-me-jieun.github.io/wedding-card/img/wedding_pick/3.jpg" />
     <meta property="og:image:width" content="552" />
     <meta property="og:image:height" content="800" />
@@ -20,7 +19,7 @@
     <title>최한서, 권지은의 모바일 청첩장</title>
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
- crossorigin="anonymous">
+        crossorigin="anonymous">
 
 
     <style>
@@ -44,12 +43,9 @@
     <link href="css/animate.css" rel="stylesheet">
 
     <!-- 내가 추가한 css-->
-    <link rel="stylesheet" href="css/newcss.css">
+    <!-- <link rel="stylesheet" href="css/newcss.css"> -->
     <!-- 내가 추가한 css-->
-
-
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
-    crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
     <script src="js/wow.min.js"></script>
     <script>
         var wow = new WOW(
@@ -75,96 +71,22 @@
             result = (result <= 0) ? 0 : (parseInt(result / misec) + 1);
 
             $("#d-day").html(result);
+
+
+            document.querySelector(".copy").addEventListener("click", function () {
+                var tempElem = document.createElement('textarea');
+                tempElem.value = 'I am copied text!';
+                document.body.appendChild(tempElem);
+                tempElem.select();
+                document.execCommand("Copy");
+                document.body.removeChild(tempElem);
+            });
         });
     </script>
 </head>
 
 <body class="text-center">
     <div class="top-div">
-
-
-
-
-        <!-- 테스트
-
-        <div class="swiper">
-            <ul class="swiper__list" aria-hidden="true">
-                <li class="swiper__item">
-                    <figure class="figure figure--round">
-                        <div class="skeleton" style="padding-top:125.97%;">
-                            <img class="img" src="" data-origin-src="img/wedding_pick/1.jpg" alt="설명">
-                        </div>
-                    </figure>
-                </li>
-                <li class="swiper__item">
-                    <figure class="figure figure--round">
-                        <div class="skeleton" style="padding-top:125.97%;">
-                            <img class="img" src="" data-origin-src="./src/img/wedding_pick/2.jpg" alt="설명">
-                        </div>
-                    </figure>
-                </li>
-                <li class="swiper__item">
-                    <figure class="figure figure--round">
-                        <div class="skeleton" style="padding-top:125.97%;">
-                            <img class="img swiper-lazy" src="" data-src="./src/img/wedding_pick/3.jpg" alt="설명">
-                        </div>
-                    </figure>
-                </li>
-                <li class="swiper__item">
-                    <figure class="figure figure--round">
-                        <div class="skeleton" style="padding-top:125.97%;">
-                            <img class="img swiper-lazy" src="" data-src="./src/img/wedding_pick/4.jpg" alt="설명">
-                        </div>
-                    </figure>
-                </li>
-                <li class="swiper__item">
-                    <figure class="figure figure--round">
-                        <div class="skeleton" style="padding-top:125.97%;">
-                            <img class="img swiper-lazy" src="" data-src="./src/img/wedding_pick/5.jpg" alt="설명">
-                        </div>
-                    </figure>
-                </li>
-                <li class="swiper__item">
-                    <figure class="figure figure--round">
-                        <div class="skeleton" style="padding-top:125.97%;">
-                            <img class="img swiper-lazy" src="" data-src="./src/img/wedding_pick/6.jpg" alt="설명">
-                        </div>
-                    </figure>
-                </li>
-                <li class="swiper__item">
-                    <figure class="figure figure--round">
-                        <div class="skeleton" style="padding-top:125.97%;">
-                            <img class="img swiper-lazy" src="" data-src="./src/img/wedding_pick/7.jpg" alt="설명">
-                        </div>
-                    </figure>
-                </li>
-                <li class="swiper__item">
-                    <figure class="figure figure--round">
-                        <div class="skeleton" style="padding-top:125.97%;">
-                            <img class="img swiper-lazy" src="" data-src="./src/img/wedding_pick/8.jpg" alt="설명">
-                        </div>
-                    </figure>
-                </li>
-                <li class="swiper__item swiper__item--more">
-                    <a href="https://www.instagram.com/rimdailybeauty/?hl=ko" target="_blank" aria-label="">
-                        <span class="icon--more"><img class="img" src="./src/img/icon_arrow_right.svg"
-                                aria-hidden="true" alt="마지막 슬라이드"></span>
-                    </a>
-                </li>
-            </ul>
-            <div class="swiper__pagination">
-                <div class="swiper__pagination-inner">
-                    <div class="swiper__pagination-items"></div>
-                    <div class="bar"></div>
-                </div>
-            </div>
-        </div> -->
-
-
-
-
-
-
         <header class="inner cover cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
             <h1 class="wow fadeIn cover-heading"
                 style="text-align: right; margin-top: 0.5em; margin-right: 0.5em; font-size: 2rem;">
@@ -172,21 +94,22 @@
                 09 <br />
                 月 <br />
                 25 <br />
-                日1 <br />
+                日 <br />
                 <span style="letter-spacing : -0.13em; margin-right: 0.1em;">⎺⎺</span>
             </h1>
         </header>
         <main role="main" class="inner">
             <div class="wow fadeInUp">
-                <p class="top-title">최한서 · 권지은</p>
-                <p class="top-title-sub">일요일 오후 14시</p>
-                <p class="top-title-sub">MJ웨딩홀 ㅇㅇㅇㅇ홀</p>
+                <p class="top-title">한서 그리고 지은 <br/>저희 결혼합니다.  </p>
+  
+                <p class="top-title-sub-custom">2022년 9월 25일 일요일 오후 2시</p>
+                <p class="top-title-sub-custom">MJ웨딩홀 ㅇㅇㅇㅇ홀</p>
                 <br /><br /><br />
                 <hr class="cover-container" />
                 <br />
             </div>
             <div class="wow fadeInUp">
-                <p class="section1-title section1-main">
+                <p class="section1-title section1-main-custom">
                     예쁜 예감이 들었다 <br />
                     우리는 언제나 손을 잡고 있게 될 것이다.
                     <br /><br />
@@ -195,7 +118,7 @@
                 <br />
             </div>
             <div class="wow fadeInUp">
-                <p class="section1-title section1-sub">
+                <p class="section1-title section1-sub-custom">
                     사랑으로 물들어가는 계절,<br />
                     연인에서 부부라는 이름으로<br />
                     평생을 함께 하고자 합니다.<br />
@@ -206,7 +129,7 @@
                 <br />
             </div>
             <div class="wow fadeInUp">
-                <div class="section1-title section1-sub2">
+                <div class="section1-title section1-sub2-custom">
                     최향진 · 이정희 <span class="small">의&nbsp아들&nbsp&nbsp</span>최한서<br />
                     조은정<span class="small">의&nbsp&nbsp&nbsp딸&nbsp&nbsp&nbsp</span>권지은
                 </div>
@@ -241,6 +164,7 @@
                 신랑 최한서 신부 권지은 올림
             </p>
             <br /><br /><br /><br />
+            
             <div class="section3 inner cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
                 <p class="wow fadeInUp section3-title section3-main">Gallery</p>
                 <div id="carouselExampleControls" class="wow fadeIn carousel slide section3-image" data-ride="carousel">
@@ -406,43 +330,48 @@
                         <div class="col-6 section4-sec1-2">
                             <span class="section4-sec1">아버지</span>
                             &nbsp&nbsp&nbsp
-                            <span class="section4-sec2">김재화</span>
+                            <span class="section4-sec2">최향진</span>
                             <br />
                             <span class="section4-sec1">어머니</span>
                             &nbsp&nbsp&nbsp
-                            <span class="section4-sec2">고복순</span>
+                            <span class="section4-sec2">이정희</span>
                         </div>
                         <div class="col section4-sec1-2">
-                            <span class="section4-sec1">아버지</span>&nbsp&nbsp&nbsp<span class="section4-sec2">이신형</span>
+
                             <br />
-                            <span class="section4-sec1">어머니</span>&nbsp&nbsp&nbsp<span class="section4-sec2">한정연</span>
+                            <span class="section4-sec1">어머니</span>&nbsp&nbsp&nbsp<span class="section4-sec2">조은정</span>
                         </div>
                     </div>
                 </div>
                 <br /><br />
             </div>
             <hr class="cover-container" />
+
             <div class="wow fadeInUp section7 inner cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
                 <br /><br />
-                <p class="wow fadeInUp section7-title section7-main">신랑 신부에게 마음 전하기</p>
+                <p class="wow fadeInUp section7-title section7-main">"참석이 어려우신 분들은 축하의 마음을 전해주세요</p>
                 <br />
                 <!-- Button trigger modal -->
                 <button type="button" class="wow fadeInUp btn section7-button" data-toggle="modal" data-target="#groom">
-                    신랑 혼주 계좌번호 보기
+                    신랑 • 혼주측 계좌번호 보기
                 </button>
+
                 <!-- Modal -->
                 <div class="modal fade" id="groom" tabindex="-1" aria-labelledby="groom" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title section7-modal section7-modal-title" id="groomLabel">신랑 혼주 계좌번호
+                                <h5 class="modal-title section7-modal section7-modal-title" id="groomLabel">신랑 • 혼주측
+                                    계좌번호
                                     보기</h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
                             <div class="modal-body section7-modal section7-modal-content">
-                                신랑 혼주 : 신한 110-114-815335 고복순
+                                신랑측 : 신한 110-114-815335 최한서
+                                <button class="copy">copy</button>
+
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
@@ -450,23 +379,25 @@
                         </div>
                     </div>
                 </div>
+
                 <!-- Button trigger modal -->
                 <button type="button" class="wow fadeInUp btn section7-button" data-toggle="modal" data-target="#bride">
-                    신부 혼주 계좌번호 보기
+                    신부 • 혼주측 계좌번호 보기
                 </button>
                 <!-- Modal -->
                 <div class="modal fade" id="bride" tabindex="-1" aria-labelledby="bride" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title section7-modal section7-modal-title" id="brideLabel">신부 혼주 계좌번호
+                                <h5 class="modal-title section7-modal section7-modal-title" id="brideLabel">신부 • 혼주측
+                                    계좌번호
                                     보기</h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
                             <div class="modal-body section7-modal section7-modal-content">
-                                신부 혼주 : 농협 352-1178-4416-13 한정연
+                                신부측 : 농협 352-1178-4416-13 권지은
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
@@ -477,6 +408,7 @@
                 <br /><br />
             </div>
             <br /><br />
+
             <div class="wow fadeInUp section5 inner cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
                 <br />
                 <p class="section5-title section5-main">Date</p>
@@ -511,7 +443,7 @@
                     </tr>
                     <tr>
                         <td class="sun">11</td>
-                        
+
                         <td>12</td>
                         <td>13</td>
                         <td>14</td>
@@ -521,7 +453,7 @@
                     </tr>
                     <tr>
                         <td class="sun">18</td>
-                        
+
                         <td>19</td>
                         <td>20</td>
                         <td>21</td>
@@ -539,7 +471,7 @@
                         <td></td>
 
                     </tr>
-          
+
                 </table>
                 <p class="wow fadeInUp section5-title section5-sub" style="margin-top:1.3em">한서 ❤️ 지은 결혼식이 <span
                         id="d-day"></span>일 남았습니다.</p>
@@ -557,17 +489,17 @@
                 <br />
                 <div id="map" class="wow fadeInUp" style="width:100%;height:350px;"></div>
 
-                <!-- <script type="text/javascript"
-                    src="//dapi.kakao.com/v2/maps/sdk.js?appkey=122a613fc96fa3ab9169935d07c14e3f"></script> -->
-                <!-- <script>
+                <script type="text/javascript"
+                    src="//dapi.kakao.com/v2/maps/sdk.js?appkey=3c84f7676a32d1e0e61a658d50c70a6f"></script>
+                <script>
                     var mapContainer = document.getElementById('map'), // 지도를 표시할 div
                         mapOption = {
-                            center: new kakao.maps.LatLng(37.56170714301528, 126.85306609567687), // 지도의 중심좌표
+                            center: new kakao.maps.LatLng(37.4818244545435, 126.79821796093711), // 지도의 중심좌표
                             level: 3 // 지도의 확대 레벨
                         };
 
                     var map = new kakao.maps.Map(mapContainer, mapOption);
-                    var markerPosition = new kakao.maps.LatLng(37.56170714301528, 126.85306609567687);
+                    var markerPosition = new kakao.maps.LatLng(37.4818244545435, 126.79821796093711);
 
                     // 마커를 생성합니다
                     var marker = new kakao.maps.Marker({
@@ -576,7 +508,7 @@
 
                     // 마커가 지도 위에 표시되도록 설정합니다
                     marker.setMap(map);
-                </script> -->
+                </script>
                 <div class="wow fadeInUp section6-location p-3">
                     <div class="accordion" id="accordionExample">
                         <div class="card">
@@ -652,10 +584,8 @@
             </footer>
         </main>
     </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
         crossorigin="anonymous"></script>
 </body>

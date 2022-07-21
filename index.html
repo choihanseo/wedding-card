@@ -80,17 +80,35 @@
       });
       function copy_number(id) {
         // alert(id);
-        var obj = document.getElementById("accnum" + id);
-        var range = document.createRange();
-        //range.selectNode(obj.childNodes[0]); //텍스트 정보를 Range 객체에 저장
-        range.selectNode(obj.childNodes[1]); //텍스트 정보를 Range 객체에 저장
-        //range.setStart(obj.childNodes[0], 0); //추가
-        //range.setEnd(obj.childNodes[0], 5); //추가
-        var sel = window.getSelection();
-        sel.removeAllRanges(); //기존 선택정보 삭제
-        sel.addRange(range); //텍스트 정보 선택
-        document.execCommand("copy"); //복사
-        sel.removeRange(range); //선택 정보 삭제
+
+        var isIOS = false;
+
+        if (navigator.userAgent.match(/i(Phone|Pod)/i) != null) {
+          //아이폰일 경우
+          var oldContentEditable = el.contentEditable,
+            oldReadOnly = el.readOnly,
+            range = document.createRange();
+          el.contentEditable = true;
+          el.readOnly = false;
+          range.selectNodeContents(el);
+          var s = window.getSelection();
+          s.removeAllRanges();
+          s.addRange(range); // A big number, to cover anything that could be inside the element.    el.setSelectionRange(0, 999999);      el.contentEditable = oldContentEditable;    el.readOnly = oldReadOnly;     document.execCommand('copy');
+        } else {
+          //안드로이드 경우
+          var obj = document.getElementById("accnum" + id);
+          var range = document.createRange();
+          //range.selectNode(obj.childNodes[0]);
+          //텍스트 정보를 Range 객체에 저장
+          range.selectNode(obj.childNodes[1]); //텍스트 정보를 Range 객체에 저장
+          //range.setStart(obj.childNodes[0], 0); //추가
+          //range.setEnd(obj.childNodes[0], 5); //추가
+          var sel = window.getSelection();
+          sel.removeAllRanges(); //기존 선택정보 삭제
+          sel.addRange(range); //텍스트 정보 선택
+          document.execCommand("copy"); //복사
+          sel.removeRange(range); //선택 정보 삭제
+        }
 
         // 복사 알림
         alert("복사되었습니다.");
@@ -132,7 +150,7 @@
           <p class="top-title">한서 그리고 지은 <br />저희 결혼합니다.</p>
 
           <p class="top-title-sub-custom">2022년 9월 25일 일요일 오후 2시</p>
-          <p class="top-title-sub-custom">MJ웨딩홀 5층 그랜드볼룸</p>
+          <p class="top-title-sub-custom">MJ컨벤션 5층 그랜드볼룸</p>
           <br /><br /><br />
           <hr class="cover-container" />
           <br />
@@ -492,7 +510,26 @@
                   </button>
                 </div>
                 <div class="modal-body section7-modal section7-modal-content">
-                  신랑측 : 신한 110-114-815335 최한서
+                  <img
+                    src="img/icon/groom.png"
+                    width="50px"
+                    height="50px"
+                  />&nbsp;&nbsp;
+                  <p>신한</p>
+                  <p>110-114-815335</p>
+                  최한서
+                  <button
+                    type="button"
+                    id="accnum110114815335"
+                    class="account_copy"
+                    onclick="copy_number('110114815335')"
+                    data-clipboard-text="110-114-815335"
+                  >
+                    복사하기
+                    <p class="hidden_accnum">110114815335</p>
+                  </button>
+                  <hr class="cover-container" />
+                  혼주 : 신한 110-114-815335 이정희
                   <button
                     type="button"
                     id="accnum110114815335"
@@ -504,6 +541,7 @@
                     <p class="hidden_accnum">110114815335</p>
                   </button>
                 </div>
+
                 <div class="modal-footer">
                   <button
                     type="button"
@@ -553,7 +591,23 @@
                   </button>
                 </div>
                 <div class="modal-body section7-modal section7-modal-content">
-                  신부측 : 농협 352-1178-4416-13 권지은
+                  <img
+                    src="img/icon/groom.png"
+                    width="50px"
+                    height="50px"
+                  />&nbsp;&nbsp; 농협 352-1178-4416-13 권지은
+                  <hr class="cover-container" />
+                  혼주 : 신한 110-114-815335 조은정
+                  <button
+                    type="button"
+                    id="accnum110114815335"
+                    class="account_copy"
+                    onclick="copy_number('110114815335')"
+                    data-clipboard-text="110-114-815335"
+                  >
+                    복사하기
+                    <p class="hidden_accnum">110114815335</p>
+                  </button>
                 </div>
                 <div class="modal-footer">
                   <button
@@ -576,8 +630,8 @@
         >
           <br />
           <p class="section5-title section5-main">Date</p>
-          <p class="section5-title section5-sub" style="margin-top: 0">
-            09월 25일 · 일요일 · 오후 02:00
+          <p class="section5-title section5-sub-custom" style="margin-top: 0">
+            09월 25일 · 일요일 · 오후 2시
           </p>
           <table class="wow fadeInUp section5-title section5-table">
             <tr>
@@ -638,7 +692,7 @@
             </tr>
           </table>
           <p
-            class="wow fadeInUp section5-title section5-sub"
+            class="wow fadeInUp section5-title-custom section5-sub-custom"
             style="margin-top: 1.3em"
           >
             한서 ❤️ 지은 결혼식이 <span id="d-day"></span>일 남았습니다.
@@ -649,10 +703,10 @@
           class="wow fadeInUp inner cover-container d-flex w-100 h-100 mx-auto flex-column"
         >
           <br /><br />
-          <p class="wow fadeInUp section6-title section6-main">Location</p>
+          <p class="wow fadeInUp section6-title section6-main">오시는길</p>
           <div class="wow fadeInUp section6-title">
             <p class="section6-location-main" style="margin-bottom: 0">
-              MJ웨딩홀 7층 단독홀
+              MJ웨딩홀 5층 그랜드볼룸
             </p>
             <p class="section6-location-sub" style="text-align: center">
               서울특별시 강서구 양천로 476

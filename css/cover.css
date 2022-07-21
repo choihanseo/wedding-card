@@ -427,6 +427,12 @@ header {
   text-shadow: none;
 }
 
+.section5-title-custom {
+  margin-top: 1em;
+  color: #333;
+  text-shadow: none;
+}
+
 .section5-main {
   font-family: DancingScript-b;
   line-height: 1.5em;
@@ -435,6 +441,12 @@ header {
 
 .section5-sub {
   font-family: NanumMyeongjo-r;
+  line-height: 1.5em;
+  font-size: 1.3rem;
+}
+
+.section5-sub-custom {
+  font-family: KimNamyun;
   line-height: 1.5em;
   font-size: 1.3rem;
 }
@@ -482,7 +494,7 @@ header {
 }
 
 .section6-main {
-  font-family: DancingScript-b;
+  font-family: Cafe24Oneprettynight;
   line-height: 1.5em;
   font-size: 2rem;
 }
@@ -521,10 +533,14 @@ header {
 }
 
 .section7-modal-title {
+  font-family: KimNamyun;
+
   font-size: 1.4rem;
 }
 
 .section7-modal-content {
+  font-family: Cafe24Oneprettynight;
+
   font-size: 1.2rem;
 }
 
@@ -540,7 +556,7 @@ header {
 }
 
 .section7-button {
-  font-family: Cafe24Oneprettynight;
+  font-family: KimNamyun;
   font-size: 1.2rem;
   background-color: #cc9999;
   color: #fff;

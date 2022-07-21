@@ -56,7 +56,15 @@ a:hover {
   text-shadow: none;
   font-family: KimNamyun;
   font-size: 1.7rem;
-
+}
+.top-title-custom {
+  margin-top: 1em;
+  margin-right: 3.5em;
+  margin-bottom: 1em;
+  color: rgb(255, 255, 255);
+  text-shadow: none;
+  font-family: KimNamyun;
+  font-size: 3rem;
 }
 
 .top-title-sub{
@@ -248,7 +256,7 @@ header {
 }
 
 .section1-sub2-custom {
-  font-family: KimNamyun;
+  font-family: Cafe24Oneprettynight;
   line-height: 2.1em;
   font-size: 1.55rem;
   font-weight: bold;
@@ -275,7 +283,25 @@ header {
   font-size: 1.35rem;
   position: relative;
 }
-
+.section2-main-custom {
+  font-family: Cafe24Oneprettynight;
+  line-height: 1.5em;
+  font-size: 1.35rem;
+  position: relative;
+}
+.section2-main-custom::after {
+  width:100%;
+  height:100%;
+  content: "";
+  background-image: url("../img/section2.jpg");
+  background-size: cover;
+  background-position: right;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
 
 .section2-main::after {
   width:100%;
@@ -293,6 +319,11 @@ header {
 
 .section2-sub {
   font-family: NanumMyeongjo-b;
+  line-height: 2em;
+  font-size: 1.2rem;
+}
+.section2-sub-custom {
+  font-family: Cafe24Oneprettynight;
   line-height: 2em;
   font-size: 1.2rem;
 }

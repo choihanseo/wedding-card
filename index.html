@@ -41,10 +41,6 @@
     <!-- Custom styles for this template -->
     <link href="css/cover.css" rel="stylesheet">
     <link href="css/animate.css" rel="stylesheet">
-
-    <!-- 내가 추가한 css-->
-    <!-- <link rel="stylesheet" href="css/newcss.css"> -->
-    <!-- 내가 추가한 css-->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
     <script src="js/wow.min.js"></script>
     <script>
@@ -81,7 +77,28 @@
                 document.execCommand("Copy");
                 document.body.removeChild(tempElem);
             });
+
+        
+
         });
+        function copy_number(id) {
+                // alert(id);
+                var obj = document.getElementById('accnum' + id);
+                var range = document.createRange();
+                range.selectNode(obj.childNodes[0]); //텍스트 정보를 Range 객체에 저장
+                //range.setStart(obj.childNodes[0], 0); //추가
+                //range.setEnd(obj.childNodes[0], 5); //추가
+                var sel = window.getSelection();
+                sel.removeAllRanges(); //기존 선택정보 삭제
+                sel.addRange(range); //텍스트 정보 선택
+                document.execCommand('copy'); //복사
+                sel.removeRange(range); //선택 정보 삭제
+
+                // 복사 알림
+                alert('복사되었습니다.');
+
+            }
+
     </script>
 </head>
 
@@ -90,20 +107,27 @@
         <header class="inner cover cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
             <h1 class="wow fadeIn cover-heading"
                 style="text-align: right; margin-top: 0.5em; margin-right: 0.5em; font-size: 2rem;">
-                <span style="letter-spacing : -0.13em; margin-right: 0.1em">⎽⎽</span><br />
+                <!-- <span style="letter-spacing : -0.13em; margin-right: 0.1em">⎽⎽</span><br />
                 09 <br />
                 月 <br />
                 25 <br />
                 日 <br />
-                <span style="letter-spacing : -0.13em; margin-right: 0.1em;">⎺⎺</span>
+                <span style="letter-spacing : -0.13em; margin-right: 0.1em;">⎺⎺</span> -->
+                <br />
+                <br />
+                <br />
+                <br />
+                <p class="top-title-custom"> 저희 결혼합니다.</p>
             </h1>
         </header>
         <main role="main" class="inner">
             <div class="wow fadeInUp">
+                <br/>
+                <!-- <img src="img/icon/wedding-arch.png"  width="100" height="100" /> -->
                 <p class="top-title">한서 그리고 지은 <br/>저희 결혼합니다.  </p>
   
                 <p class="top-title-sub-custom">2022년 9월 25일 일요일 오후 2시</p>
-                <p class="top-title-sub-custom">MJ웨딩홀 ㅇㅇㅇㅇ홀</p>
+                <p class="top-title-sub-custom">MJ웨딩홀 5층 그랜드볼룸</p>
                 <br /><br /><br />
                 <hr class="cover-container" />
                 <br />
@@ -130,7 +154,7 @@
             </div>
             <div class="wow fadeInUp">
                 <div class="section1-title section1-sub2-custom">
-                    최향진 · 이정희 <span class="small">의&nbsp아들&nbsp&nbsp</span>최한서<br />
+                최향진 이정희 <span class="small">의&nbsp아들&nbsp&nbsp</span>최한서<br />
                     조은정<span class="small">의&nbsp&nbsp&nbsp딸&nbsp&nbsp&nbsp</span>권지은
                 </div>
                 <br /><br /><br /><br />
@@ -138,12 +162,12 @@
             <hr class="cover-container" />
             <br />
             <p
-                class="wow fadeInUp section2-title section2-main inner cover cover-container d-flex w-100 h-100 p-5 mx-auto flex-column">
+                class="wow fadeInUp section2-title section2-main-custom inner cover cover-container d-flex w-100 h-100 p-5 mx-auto flex-column">
                 축하해 주시는<br />
                 모든 분들에게
             </p>
             <p
-                class="wow fadeInUp section2-title section2-sub inner cover cover-container d-flex w-100 h-100 p-2 mx-auto flex-column">
+                class="wow fadeInUp section2-title section2-sub-custom inner cover cover-container d-flex w-100 h-100 p-2 mx-auto flex-column">
                 안녕하세요.<br />
                 <br />
                 결혼식을 진행하는 저희 마음과 같이<br />
@@ -164,6 +188,7 @@
                 신랑 최한서 신부 권지은 올림
             </p>
             <br /><br /><br /><br />
+
             
             <div class="section3 inner cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
                 <p class="wow fadeInUp section3-title section3-main">Gallery</p>
@@ -370,7 +395,9 @@
                             </div>
                             <div class="modal-body section7-modal section7-modal-content">
                                 신랑측 : 신한 110-114-815335 최한서
-                                <button class="copy">copy</button>
+                                <button type="button" id="accnum110114815335" class="account_copy" onclick="copy_number('110114815335')" data-clipboard-text="110-114-815335">
+                                    복사하기
+                                </button>
 
                             </div>
                             <div class="modal-footer">

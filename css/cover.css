@@ -3,33 +3,33 @@
  */
 
 @font-face {
-  font-family: 'NanumMyeongjo-r';
-  src: url('../font/NanumMyeongjo-Regular.ttf') format('truetype');
+  font-family: "NanumMyeongjo-r";
+  src: url("../font/NanumMyeongjo-Regular.ttf") format("truetype");
 }
 @font-face {
-  font-family: 'NanumMyeongjo-e';
-  src: url('../font/NanumMyeongjo-ExtraBold.ttf') format('truetype');
+  font-family: "NanumMyeongjo-e";
+  src: url("../font/NanumMyeongjo-ExtraBold.ttf") format("truetype");
 }
 @font-face {
-  font-family: 'NanumMyeongjo-b';
-  src: url('../font/NanumMyeongjo-Bold.ttf') format('truetype');
+  font-family: "NanumMyeongjo-b";
+  src: url("../font/NanumMyeongjo-Bold.ttf") format("truetype");
 }
 @font-face {
-  font-family: 'DancingScript-b';
-  src: url('../font/DancingScript-Bold.ttf') format('truetype');
+  font-family: "DancingScript-b";
+  src: url("../font/DancingScript-Bold.ttf") format("truetype");
 }
 @font-face {
-  font-family: 'KyoboHandwriting2020pdy';
-  src: url('../font/KyoboHandwriting2020pdy.ttf') format('truetype');
+  font-family: "KyoboHandwriting2020pdy";
+  src: url("../font/KyoboHandwriting2020pdy.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'KimNamyun';
-  src: url('../font/KimNamyun.ttf') format('truetype');
+  font-family: "KimNamyun";
+  src: url("../font/KimNamyun.ttf") format("truetype");
 }
 @font-face {
-  font-family: 'Cafe24Oneprettynight';
-  src: url('../font/Cafe24Oneprettynight.ttf') format('truetype');
+  font-family: "Cafe24Oneprettynight";
+  src: url("../font/Cafe24Oneprettynight.ttf") format("truetype");
 }
 
 /* Links */
@@ -46,7 +46,7 @@ a:hover {
   color: #333;
   text-shadow: none; /* Prevent inheritance from `body` */
   background-color: #fff;
-  border: .05rem solid #fff;
+  border: 0.05rem solid #fff;
 }
 
 .top-title {
@@ -67,7 +67,7 @@ a:hover {
   font-size: 2.5rem;
 }
 
-.top-title-sub{
+.top-title-sub {
   margin-top: 1em;
   color: #333;
   text-shadow: none;
@@ -75,7 +75,7 @@ a:hover {
   font-size: 1.2rem;
 }
 
-.top-title-sub-custom{
+.top-title-sub-custom {
   margin-top: 0.5em;
   color: #333;
   text-shadow: none;
@@ -83,7 +83,7 @@ a:hover {
   font-size: 1.7rem;
 }
 
-.top-title-sub-cafe-custom{
+.top-title-sub-cafe-custom {
   margin-top: 0.5em;
   color: #333;
   text-shadow: none;
@@ -91,7 +91,6 @@ a:hover {
   font-size: 1.7rem;
   font-weight: bold;
 }
-
 
 /*
  * Base structure
@@ -151,7 +150,6 @@ body {
   color: black;
 }
 
-
 /*
  * Header
  */
@@ -164,16 +162,16 @@ body {
 }
 
 .nav-masthead .nav-link {
-  padding: .25rem 0;
+  padding: 0.25rem 0;
   font-weight: 700;
-  color: rgba(255, 255, 255, .5);
+  color: rgba(255, 255, 255, 0.5);
   background-color: transparent;
-  border-bottom: .25rem solid transparent;
+  border-bottom: 0.25rem solid transparent;
 }
 
 .nav-masthead .nav-link:hover,
 .nav-masthead .nav-link:focus {
-  border-bottom-color: rgba(255, 255, 255, .25);
+  border-bottom-color: rgba(255, 255, 255, 0.25);
 }
 
 .nav-masthead .nav-link + .nav-link {
@@ -211,7 +209,6 @@ header {
   }
 }
 
-
 /*
  * section
  */
@@ -248,7 +245,6 @@ header {
   font-size: 1.35rem;
 }
 
-
 .section1-sub-custom {
   font-family: Cafe24Oneprettynight;
   line-height: 2.1em;
@@ -264,7 +260,6 @@ header {
 .section1-sub2-custom .small {
   font-size: 1.2rem;
   font-weight: bold;
-
 }
 
 .section1-sub2 .small {
@@ -290,8 +285,8 @@ header {
   position: relative;
 }
 .section2-main-custom::after {
-  width:100%;
-  height:100%;
+  width: 100%;
+  height: 100%;
   content: "";
   background-image: url("../img/section2.jpg");
   background-size: cover;
@@ -304,8 +299,8 @@ header {
 }
 
 .section2-main::after {
-  width:100%;
-  height:100%;
+  width: 100%;
+  height: 100%;
   content: "";
   background-image: url("../img/section2.jpg");
   background-size: cover;
@@ -347,7 +342,7 @@ header {
 }
 
 .section3-image {
-  box-shadow : 2px 2px 5px #999;
+  box-shadow: 2px 2px 5px #999;
 }
 
 .section4-title {
@@ -378,7 +373,7 @@ header {
   font-size: 1.35rem;
   background: none;
   border: none;
-  color: #55CCCC;
+  color: #55cccc;
 }
 
 .section4-sec3-g {
@@ -387,9 +382,8 @@ header {
   font-size: 1.35rem;
   background: none;
   border: none;
-  color: #FF99CC;
+  color: #ff99cc;
 }
-
 
 .section4-sec1-custom {
   font-family: Cafe24Oneprettynight;
@@ -403,7 +397,6 @@ header {
   line-height: 1.5em;
   font-size: 1.35rem;
   font-weight: bold;
-
 }
 
 .section4-sec3-custom {
@@ -412,7 +405,7 @@ header {
   font-size: 1.35rem;
   background: none;
   border: none;
-  color: #55CCCC;
+  color: #55cccc;
 }
 
 .section4-sec3-g-custom {
@@ -421,7 +414,7 @@ header {
   font-size: 1.35rem;
   background: none;
   border: none;
-  color: #FF99CC;
+  color: #ff99cc;
 }
 
 .section5 {
@@ -454,26 +447,26 @@ header {
   border-bottom: 1px solid #ccc;
 }
 
-.section5-table tr td{
+.section5-table tr td {
   padding-top: 0.8em;
   padding-bottom: 0.8em;
 }
 
-.section5-table tr .sun{
+.section5-table tr .sun {
   color: red;
 }
 
-.section5-table tr .check{
+.section5-table tr .check {
   color: white;
   background-color: chocolate;
   border-radius: 50px;
 }
 
-.section5-table tr:first-child td{
+.section5-table tr:first-child td {
   padding-top: 2em;
 }
 
-.section5-table tr:last-child td{
+.section5-table tr:last-child td {
   padding-bottom: 2em;
 }
 
@@ -549,7 +542,7 @@ header {
 .section7-button {
   font-family: Cafe24Oneprettynight;
   font-size: 1.2rem;
-  background-color: #CC9999;
+  background-color: #cc9999;
   color: #fff;
   border: 0;
   border-radius: 50px;
@@ -559,7 +552,7 @@ header {
 }
 
 .section7-button:hover {
-  background-color: #CC9999;
+  background-color: #cc9999;
   color: #fff;
   border: 0;
 }
@@ -571,7 +564,7 @@ header {
 }
 
 .section7-button:valid {
-  background-color: #CC9999;
+  background-color: #cc9999;
   color: #fff;
   border: 0;
 }
@@ -587,14 +580,17 @@ header {
   padding: 0 1.5rem;
 }
 .cover .btn-lg {
-  padding: .75rem 1.25rem;
+  padding: 0.75rem 1.25rem;
   font-weight: 700;
 }
-
 
 /*
  * Footer
  */
 .mastfoot {
-  color: rgba(255, 255, 255, .5);
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.hidden_accnum {
+  display: none;
 }

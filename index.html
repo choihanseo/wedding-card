@@ -85,24 +85,22 @@
 
         if (navigator.userAgent.match(/i(Phone|Pod)/i) != null) {
           //아이폰일 경우
-          var oldContentEditable = el.contentEditable,
-            oldReadOnly = el.readOnly,
-            range = document.createRange();
-          el.contentEditable = true;
-          el.readOnly = false;
-          range.selectNodeContents(el);
-          var s = window.getSelection();
-          s.removeAllRanges();
-          s.addRange(range); // A big number, to cover anything that could be inside the element.    el.setSelectionRange(0, 999999);      el.contentEditable = oldContentEditable;    el.readOnly = oldReadOnly;     document.execCommand('copy');
+          var obj = document.getElementById("accnum" + id);
+          var tmpTextarea = document.createElement("textarea");
+          tmpTextarea.value = obj.childNodes[1].textContent;
+
+          document.body.appendChild(tmpTextarea);
+          tmpTextarea.select();
+          tmpTextarea.setSelectionRange(0, 9999); // 셀렉트 범위 설정
+
+          document.execCommand("copy");
+          document.body.removeChild(tmpTextarea);
         } else {
           //안드로이드 경우
           var obj = document.getElementById("accnum" + id);
           var range = document.createRange();
-          //range.selectNode(obj.childNodes[0]);
           //텍스트 정보를 Range 객체에 저장
           range.selectNode(obj.childNodes[1]); //텍스트 정보를 Range 객체에 저장
-          //range.setStart(obj.childNodes[0], 0); //추가
-          //range.setEnd(obj.childNodes[0], 5); //추가
           var sel = window.getSelection();
           sel.removeAllRanges(); //기존 선택정보 삭제
           sel.addRange(range); //텍스트 정보 선택
@@ -130,12 +128,6 @@
             font-size: 2rem;
           "
         >
-          <!-- <span style="letter-spacing : -0.13em; margin-right: 0.1em">⎽⎽</span><br />
-                09 <br />
-                月 <br />
-                25 <br />
-                日 <br />
-                <span style="letter-spacing : -0.13em; margin-right: 0.1em;">⎺⎺</span> -->
           <br />
           <br />
           <br />
@@ -514,10 +506,7 @@
                     src="img/icon/groom.png"
                     width="50px"
                     height="50px"
-                  />&nbsp;&nbsp;
-                  <p>신한</p>
-                  <p>110-114-815335</p>
-                  최한서
+                  />&nbsp;&nbsp; 신한 110-114-815335 최한서
                   <button
                     type="button"
                     id="accnum110114815335"
@@ -525,11 +514,15 @@
                     onclick="copy_number('110114815335')"
                     data-clipboard-text="110-114-815335"
                   >
-                    복사하기
+                    복사
                     <p class="hidden_accnum">110114815335</p>
                   </button>
                   <hr class="cover-container" />
-                  혼주 : 신한 110-114-815335 이정희
+                  <img
+                    src="img/icon/mom.png"
+                    width="50px"
+                    height="50px"
+                  />&nbsp;&nbsp; 신한 110-114-815335 이정희
                   <button
                     type="button"
                     id="accnum110114815335"
@@ -537,7 +530,7 @@
                     onclick="copy_number('110114815335')"
                     data-clipboard-text="110-114-815335"
                   >
-                    복사하기
+                    복사
                     <p class="hidden_accnum">110114815335</p>
                   </button>
                 </div>
@@ -592,12 +585,16 @@
                 </div>
                 <div class="modal-body section7-modal section7-modal-content">
                   <img
-                    src="img/icon/groom.png"
+                    src="img/icon/bride.png"
                     width="50px"
                     height="50px"
                   />&nbsp;&nbsp; 농협 352-1178-4416-13 권지은
                   <hr class="cover-container" />
-                  혼주 : 신한 110-114-815335 조은정
+                  <img
+                    src="img/icon/mom.png"
+                    width="50px"
+                    height="50px"
+                  />&nbsp;&nbsp; 신한 110-114-815335 조은정
                   <button
                     type="button"
                     id="accnum110114815335"
@@ -605,7 +602,7 @@
                     onclick="copy_number('110114815335')"
                     data-clipboard-text="110-114-815335"
                   >
-                    복사하기
+                    복사
                     <p class="hidden_accnum">110114815335</p>
                   </button>
                 </div>

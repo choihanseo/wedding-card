@@ -59,12 +59,12 @@ a:hover {
 }
 .top-title-custom {
   margin-top: 1em;
-  margin-right: 3.5em;
   margin-bottom: 1em;
   color: rgb(255, 255, 255);
   text-shadow: none;
+  text-align: center;
   font-family: KimNamyun;
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 
 .top-title-sub{
@@ -390,6 +390,40 @@ header {
   color: #FF99CC;
 }
 
+
+.section4-sec1-custom {
+  font-family: Cafe24Oneprettynight;
+  line-height: 1.5em;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.section4-sec2-custom {
+  font-family: Cafe24Oneprettynight;
+  line-height: 1.5em;
+  font-size: 1.35rem;
+  font-weight: bold;
+
+}
+
+.section4-sec3-custom {
+  font-family: Cafe24Oneprettynight;
+  line-height: 1.5em;
+  font-size: 1.35rem;
+  background: none;
+  border: none;
+  color: #55CCCC;
+}
+
+.section4-sec3-g-custom {
+  font-family: Cafe24Oneprettynight;
+  line-height: 1.5em;
+  font-size: 1.35rem;
+  background: none;
+  border: none;
+  color: #FF99CC;
+}
+
 .section5 {
   background-color: #f9f9f9;
 }
@@ -461,19 +495,19 @@ header {
 }
 
 .section6-location-main {
-  font-family: NanumMyeongjo-e;
+  font-family: Cafe24Oneprettynight;
   line-height: 1.5em;
   font-size: 1.3rem;
 }
 
 .section6-sub {
-  font-family: NanumMyeongjo-r;
+  font-family: Cafe24Oneprettynight;
   line-height: 1.5em;
   font-size: 1.3rem;
 }
 
 .section6-location-sub {
-  font-family: NanumMyeongjo-r;
+  font-family: Cafe24Oneprettynight;
   line-height: 1.5em;
   font-size: 1.2rem;
   text-align: left;
@@ -502,13 +536,18 @@ header {
 }
 
 .section7-main {
-  font-family: NanumMyeongjo-b;
+  font-family: Cafe24Oneprettynight;
+  line-height: 1.4em;
+  font-size: 1.4rem;
+}
+.section7-main {
+  font-family: Cafe24Oneprettynight;
   line-height: 1.4em;
   font-size: 1.4rem;
 }
 
 .section7-button {
-  font-family: NanumMyeongjo-b;
+  font-family: Cafe24Oneprettynight;
   font-size: 1.2rem;
   background-color: #CC9999;
   color: #fff;

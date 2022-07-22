@@ -616,6 +616,20 @@ header {
   color: rgba(255, 255, 255, 0.5);
 }
 
-.hidden_accnum {
-  display: none;
+hr.cover-container{
+  position:relative;
+}
+hr.cover-container::after{
+  position: absolute;
+  top: -18px;
+  left: 0;
+  right:0;
+  display: block;
+  content: '';
+  width: 120px;
+  height: 40px;
+  overflow: hidden;
+  margin: 0 auto;
+  background-image: url("../img/icon/leaf.png");
+  background-size: 120px 41px;
 }

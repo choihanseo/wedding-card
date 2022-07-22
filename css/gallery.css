@@ -992,5 +992,17 @@ img.is-loaded {
   grid-column-start: 1;
   grid-column-end: 8;
   grid-row-start: 39;
-  grid-row-end: 43;
+  grid-row-end: 50;
+}
+.gallery__item--Z2 {
+  grid-column-start: 8;
+  grid-column-end: 15;
+  grid-row-start: 43;
+  grid-row-end: 50;
+}
+.gallery__item--Z3 {
+  grid-column-start: 15;
+  grid-column-end: 22;
+  grid-row-start: 43;
+  grid-row-end: 50;
 }

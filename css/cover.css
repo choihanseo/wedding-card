@@ -637,3 +637,10 @@ hr.cover-container::after{
 .accountFont{
   font-weight: bold;
 }
+.account_copy{
+ border: none; 
+}
+
+.seachMap{
+  text-align: center;
+}

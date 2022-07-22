@@ -998,11 +998,32 @@ img.is-loaded {
   grid-column-start: 8;
   grid-column-end: 15;
   grid-row-start: 43;
-  grid-row-end: 50;
+  grid-row-end: 45;
 }
 .gallery__item--Z3 {
   grid-column-start: 15;
   grid-column-end: 22;
   grid-row-start: 43;
+  grid-row-end: 45;
+}
+.gallery__item--L1 {
+  grid-column-start: 1;
+  grid-column-end: 11;
+  grid-row-start: 50;
+  grid-row-end: 54;
+}
+.gallery__item--L2 {
+  grid-column-start: 8;
+  grid-column-end: 22;
+  grid-row-start: 45;
   grid-row-end: 50;
 }
+.gallery__item--L3 {
+  grid-column-start: 11;
+  grid-column-end: 22;
+  grid-row-start: 50;
+  grid-row-end: 54;
+}
+
+
+

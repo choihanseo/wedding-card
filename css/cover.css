@@ -641,6 +641,9 @@ hr.cover-container::after{
  border: none; 
 }
 
-.seachMap{
+.searchMap{
   text-align: center;
+}
+.searchInfo{
+  margin-bottom: 0.5px;
 }

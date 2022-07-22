@@ -970,8 +970,8 @@ img.is-loaded {
 .gallery__item--R1 {
   grid-column-start: 8;
   grid-column-end: 1;
-  grid-row-start: 28;
-  grid-row-end: 39;
+  grid-row-start: 22;
+  grid-row-end: 37;
 }
 
 .gallery__item--Y8 {
@@ -991,8 +991,8 @@ img.is-loaded {
 .gallery__item--Z1 {
   grid-column-start: 1;
   grid-column-end: 8;
-  grid-row-start: 39;
-  grid-row-end: 50;
+  grid-row-start: 37;
+  grid-row-end: 45;
 }
 .gallery__item--Z2 {
   grid-column-start: 8;
@@ -1013,7 +1013,7 @@ img.is-loaded {
   grid-row-end: 54;
 }
 .gallery__item--L2 {
-  grid-column-start: 8;
+  grid-column-start: 1;
   grid-column-end: 22;
   grid-row-start: 45;
   grid-row-end: 50;

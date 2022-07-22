@@ -334,11 +334,11 @@ header {
 }
 
 .section3-main {
-  font-family: DancingScript-b;
+  font-family: Cafe24Oneprettynight;
   line-height: 1.5em;
   font-size: 2rem;
-  margin-top: 2em;
-  margin-bottom: 2em;
+  /* margin-top: 2em;
+  margin-bottom: 2em; */
 }
 
 .section3-image {

@@ -17,8 +17,8 @@
     <meta property="og:description" content="사랑으로 물들어가는 계절, 연인에서 부부라는 이름으로 평생을 함께 하고자 합니다." />
     <meta name="format-detection" content="telephone=no" />
     <title>최한서, 권지은의 모바일 청첩장</title>
-    <!-- Bootstrap core CSS -->
-    
+
+
     <style>
         .bd-placeholder-img {
             font-size: 1.125rem;
@@ -38,13 +38,14 @@
     <link href="css/cover.css" rel="stylesheet" />
     <link href="css/animate.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
-    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=3c84f7676a32d1e0e61a658d50c70a6f"></script>
+    <script type="text/javascript"
+        src="//dapi.kakao.com/v2/maps/sdk.js?appkey=3c84f7676a32d1e0e61a658d50c70a6f"></script>
 
     <link href="css/gallery.css" rel="stylesheet" />
     <!-- PhotoSwipe -->
     <link rel="stylesheet" href="css/photoswipe.css" />
     <link rel="stylesheet" href="css/default-skin.css" />
-    
+
 
     <!-- <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0/css/bootstrap.css' integrity='sha512-h1rwF0uB6r2IuEZcyjPrR53bBKN9Wb4yL+w3Rdlzmc3CkBF1gMSFvQIIstnu4bEtYDaKca5ke5S8UBAACRImyg==' crossorigin='anonymous'/> -->
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js" integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g==" crossorigin="anonymous"></script> -->
@@ -59,8 +60,10 @@
 
 
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0/js/bootstrap.js" integrity="sha512-8Y8eGK92dzouwpROIppwr+0kPauu0qqtnzZZNEF8Pat5tuRNJxJXCkbQfJ0HlUG3y1HB3z18CSKmUo7i2zcPpg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
-        
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.11/clipboard.js" integrity="sha512-ePtegHW811NTnZd0Er1UxtBb8dizKEdSzANYy/UhxM40FC2yCWwb1CQrj03BPbrs6XdUkcHuyVn9Xq9q0Lm34g==" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.11/clipboard.js"
+        integrity="sha512-ePtegHW811NTnZd0Er1UxtBb8dizKEdSzANYy/UhxM40FC2yCWwb1CQrj03BPbrs6XdUkcHuyVn9Xq9q0Lm34g=="
+        crossorigin="anonymous"></script>
     <script>
         var wow = new WOW({
             boxClass: "wow", // animated element css class (default is wow)
@@ -85,20 +88,21 @@
             $("#d-day").html(result);
 
             wow.init();
+            initWeddingPhoto();
             kakaoMap();
 
-            
+
         });
         function kakaoMap() {
-            
+
             var mapContainer = document.getElementById("map"), // 지도를 표시할 div
-            mapOption = {
-                center: new kakao.maps.LatLng(
-                    37.4818244545435,
-                    126.79821796093711
-                ), // 지도의 중심좌표
-                level: 3, // 지도의 확대 레벨
-            };
+                mapOption = {
+                    center: new kakao.maps.LatLng(
+                        37.4818244545435,
+                        126.79821796093711
+                    ), // 지도의 중심좌표
+                    level: 3, // 지도의 확대 레벨
+                };
 
             var map = new kakao.maps.Map(mapContainer, mapOption);
             var markerPosition = new kakao.maps.LatLng(
@@ -116,7 +120,25 @@
             // map.setDraggable(false); 
             // map.setZoomable(false)
         }
-            
+
+        function initWeddingPhoto() {
+            var images = document.querySelectorAll('img[loading]');
+            console.log('ddd')
+            for (var i = 0; i < images.length; i++) {
+                if (images[i].complete) {
+                    images[i].classList.add('is-loaded');
+                } else {
+                    images[i].addEventListener(
+                        'load',
+                        function () {
+                            this.classList.add('is-loaded');
+                        },
+                        false
+                    );
+                }
+            }
+        }
+
 
         function copy_number(id) {
             // alert(id);
@@ -162,7 +184,7 @@
         }
 
     </script>
-   
+
 
 </head>
 
@@ -251,10 +273,313 @@
                 신랑 최한서 신부 권지은 올림
             </p>
             <br /><br /><br /><br />
+            <hr class="cover-container" />
+            <p class="wow fadeInUp section3-title section3-main">Wedding Photo</p> 
+            <div class="ww-section bg-pinktone" id="gallery">
+                <div class="ww-photo-gallery pb-5">
+                  <div class="container">
+                    <div class="ww-gallery">
+                      <div class="card-columns">
+                        <div
+                          class="pswp"
+                          tabindex="-1"
+                          role="dialog"
+                          aria-hidden="true"
+                        >
+                          <div class="pswp__bg"></div>
+            
+                          <div class="pswp__scroll-wrap">
+                            <div class="pswp__container">
+                              <div class="pswp__item"></div>
+                              <div class="pswp__item"></div>
+                              <div class="pswp__item"></div>
+                            </div>
+            
+                            <div class="pswp__ui pswp__ui--hidden">
+                              <div class="pswp__top-bar">
+                                <div class="pswp__counter"></div>
+            
+                                <button
+                                  class="pswp__button pswp__button--close"
+                                  title="Close (Esc)"
+                                ></button>
+            
+                                <button
+                                  class="pswp__button pswp__button--zoom"
+                                  title="Zoom in/out"
+                                ></button>
+            
+                                <div class="pswp__preloader">
+                                  <div class="pswp__preloader__icn">
+                                    <div class="pswp__preloader__cut">
+                                      <div class="pswp__preloader__donut"></div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+            
+                              <div
+                                class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"
+                              >
+                                <div class="pswp__share-tooltip"></div>
+                              </div>
+            
+                              <button
+                                class="pswp__button pswp__button--arrow--left"
+                                title="Previous (arrow left)"
+                              ></button>
+            
+                              <button
+                                class="pswp__button pswp__button--arrow--right"
+                                title="Next (arrow right)"
+                              ></button>
+            
+                              <div class="pswp__caption">
+                                <div class="pswp__caption__center"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+            
+                     
+            
+                      <div class="gallery-wrapper">
+                        <div class="gallery" data-is-empty="false" data-columns="3">
+                          <figure class="gallery__item gallery__item--11">
+                            <a href="img/mobile_pick/1.JPG" data-size="480x640"
+                              ><img
+                                loading="lazy"
+                                src="img/mobile_pick/1.JPG"
+                                alt="gallery1"
+                                width="480"
+                                height="640"
+                            /></a>
+                          </figure>
+            
+                          <figure class="gallery__item gallery__item--1D">
+                            <a href="img/mobile_pick/2.jpg" data-size="720x1080"
+                              ><img
+                                loading="lazy"
+                                src="img/mobile_pick/2.JPG"
+                                alt="gallery4"
+                                width="720"
+                                height="1080"
+                            /></a>
+                          </figure>
+            
+                          <figure class="gallery__item gallery__item--7D">
+                            <a
+                              href="img/mobile_pick/3.JPG"
+                              data-size="959x1440"
+                              ><img
+                                loading="lazy"
+                                src="img/mobile_pick/3.JPG"
+                                alt="2x2"
+                                width="959"
+                                height="1440"
+                            /></a>
+                          </figure>
+            
+                          <figure class="gallery__item gallery__item--H7">
+                            <a
+                              href="img/mobile_pick/4.JPG"
+                              data-size="600x900"
+                              ><img
+                                loading="lazy"
+                                src="img/mobile_pick/4.JPG"
+                                alt="2x2"
+                                width="600"
+                                height="900"
+                            /></a>
+                          </figure>
+            
+                          <figure class="gallery__item gallery__item--D1">
+                            <a
+                              href="img/mobile_pick/5.JPG"
+                              data-size="600x900"
+                              ><img
+                                loading="lazy"
+                                src="img/mobile_pick/5.JPG"
+                                alt="2x2"
+                                width="600"
+                                height="900"
+                            /></a>
+                          </figure>
+            
+                          <figure class="gallery__item gallery__item--D8">
+                            <a
+                              href="img/mobile_pick/6.JPG"
+                              data-size="600x900"
+                              ><img
+                                loading="lazy"
+                                src="img/mobile_pick/6.JPG"
+                                alt="2x2"
+                                width="600"
+                                height="900"
+                            /></a>
+                          </figure>
+            
+                          <figure class="gallery__item gallery__item--HD">
+                            <a href="img/mobile_pick/7.JPG" data-size="719x1080"
+                              ><img
+                                loading="lazy"
+                                src="img/mobile_pick/7.JPG"
+                                alt="2x2"
+                                width="719"
+                                height="1080"
+                            /></a>
+                          </figure>
+                          <figure class="gallery__item gallery__item--L1">
+                            <a
+                              href="img/mobile_pick/8.JPG"
+                              data-size="720x1080"
+                              ><img
+                                loading="lazy"
+                                src="img/mobile_pick/8.JPG"
+                                alt="2x2"
+                                width="720"
+                                height="1080"
+                            /></a>
+                          </figure>
+            
+                          <figure class="gallery__item gallery__item--L8">
+                            <a
+                              href="img/mobile_pick/9.JPG"
+                              data-size="600x900"
+                              ><img
+                                loading="lazy"
+                                src="img/mobile_pick/9.JPG"
+                                alt="2x2"
+                                width="600"
+                                height="900"
+                            /></a>
+                          </figure>
+            
+                          <figure class="gallery__item gallery__item--R1">
+                            <a
+                              href="img/mobile_pick/10.JPG"
+                              data-size="600x900"
+                              ><img
+                                loading="lazy"
+                                src="img/mobile_pick/10.JPG"
+                                alt="2x2"
+                                width="600"
+                                height="900"
+                            /></a>
+                          </figure>
+            
+                          <figure class="gallery__item gallery__item--Y8">
+                            <a
+                              href="img/mobile_pick/11.JPG"
+                              data-size="600x900"
+                              ><img
+                                loading="lazy"
+                                src="img/mobile_pick/11.JPG"
+                                alt="2x2"
+                                width="600"
+                                height="900"
+                            /></a>
+                          </figure>
+            
+                          <figure class="gallery__item gallery__item--YE">
+                            <a
+                              href="img/mobile_pick/12.JPG"
+                              data-size="600x900"
+                              ><img
+                                loading="lazy"
+                                src="img/mobile_pick/12.JPG"
+                                alt="2x2"
+                                width="600"
+                                height="900"
+                            /></a>
+                          </figure>
+            
+                          <figure class="gallery__item gallery__item--Z1">
+                            <a
+                              href="img/mobile_pick/13.JPG"
+                              data-size="600x400"
+                              ><img
+                                loading="lazy"
+                                src="img/mobile_pick/13.JPG"
+                                alt="2x2"
+                                width="600"
+                                height="400"
+                            /></a>
+                          </figure>
+                        </div>
+                      </div>
+            
+                      <div
+                        class="pswp"
+                        tabindex="-1"
+                        role="dialog"
+                        aria-hidden="true"
+                      >
+                        <div class="pswp__bg"></div>
+                        <div class="pswp__scroll-wrap">
+                          <div class="pswp__container">
+                            <div class="pswp__item"></div>
+                            <div class="pswp__item"></div>
+                            <div class="pswp__item"></div>
+                          </div>
+                          <div class="pswp__ui pswp__ui--hidden">
+                            <div class="pswp__top-bar">
+                              <div class="pswp__counter"></div>
+                              <button
+                                class="pswp__button pswp__button--close"
+                                title="Close (Esc)"
+                              ></button
+                              ><button
+                                class="pswp__button pswp__button--share"
+                                title="Share"
+                              ></button
+                              ><button
+                                class="pswp__button pswp__button--fs"
+                                title="Toggle fullscreen"
+                              ></button
+                              ><button
+                                class="pswp__button pswp__button--zoom"
+                                title="Zoom in/out"
+                              ></button>
+                              <div class="pswp__preloader">
+                                <div class="pswp__preloader__icn">
+                                  <div class="pswp__preloader__cut">
+                                    <div class="pswp__preloader__donut"></div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div
+                              class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"
+                            >
+                              <div class="pswp__share-tooltip"></div>
+                            </div>
+                            <button
+                              class="pswp__button pswp__button--arrow--left"
+                              title="Previous (arrow left)"
+                            ></button
+                            ><button
+                              class="pswp__button pswp__button--arrow--right"
+                              title="Next (arrow right)"
+                            ></button>
+                            <div class="pswp__caption">
+                              <div class="pswp__caption__center"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                   
+            
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <hr class="cover-container" />
 
-            <div class="section3 inner cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-                <p class="wow fadeInUp section3-title section3-main">Gallery</p>
-                <div id="carouselExampleControls" class="wow fadeIn carousel slide section3-image" data-ride="carousel">
+            <!-- <div class="section3 inner cover-container d-flex w-100 h-100 p-3 mx-auto flex-column"> -->
+                <!-- <p class="wow fadeInUp section3-title section3-main">Gallery</p> -->
+                <!-- <div id="carouselExampleControls" class="wow fadeIn carousel slide section3-image" data-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <img src="img/wedding_pick/1.jpg" class="d-block w-100" />
@@ -349,9 +674,9 @@
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="sr-only">Next</span>
                     </a>
-                </div>
-                <br /><br /><br />
-            </div>
+                </div> -->
+                <!-- <br /><br /><br /> -->
+            <!-- </div> -->
             <div class="wow fadeInUp">
                 <br /><br />
                 <div class="container section4-title">
@@ -458,27 +783,28 @@
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
-                            <div class="modal-body section7-modal section7-modal-content"> 
+                            <div class="modal-body section7-modal section7-modal-content">
                                 <span class="accountFont">신 랑</span>
-                                <br/>
-                                <img src="img/icon/groom.png" width="50px" height="50px" />&nbsp;&nbsp; 
+                                <br />
+                                <img src="img/icon/groom.png" width="50px" height="50px" />&nbsp;&nbsp;
                                 신한 <span id="groomAccountNum">22222222222</span> 최한서
-                                    <button type="button" class="account_copy" data-clipboard-target="#groomAccountNum">
-                                        복사
-                                    </button>  
-                                    <br/>
-                                    <br/>
-                                <hr class="cover-container" />
-                                <br/>
-                                <span class="accountFont">신랑측 혼주</span>
-                                <br/>
-                                <img src="img/icon/family.png" width="50px" height="50px" />&nbsp;&nbsp; 
-                                신한 <span id="groomParentAccountNum">33333333333</span>이정희
-                                <button type="button" id="accnum110114815335" class="account_copy" data-clipboard-target="#groomParentAccountNum">
+                                <button type="button" class="account_copy" data-clipboard-target="#groomAccountNum">
                                     복사
                                 </button>
-                                <br/>
-                              
+                                <br />
+                                <br />
+                                <hr class="cover-container" />
+                                <br />
+                                <span class="accountFont">신랑측 혼주</span>
+                                <br />
+                                <img src="img/icon/family.png" width="50px" height="50px" />&nbsp;&nbsp;
+                                신한 <span id="groomParentAccountNum">33333333333</span>이정희
+                                <button type="button" id="accnum110114815335" class="account_copy"
+                                    data-clipboard-target="#groomParentAccountNum">
+                                    복사
+                                </button>
+                                <br />
+
                             </div>
 
                             <div class="modal-footer">
@@ -507,26 +833,27 @@
                                 </button>
                             </div>
                             <div class="modal-body section7-modal section7-modal-content">
-                            <span class="accountFont">신 부</span>
-                             <br/>
-                             <br/>
-                             <img src="img/icon/bride.png" width="50px" height="50px" />&nbsp;&nbsp; 
-                            
-                             신한 <span id="brideAccountNum">22222222222</span> 권지은
-                                 <button type="button" class="account_copy" data-clipboard-target="#brideAccountNum">
-                                     복사
-                                 </button>  
-                             <hr class="cover-container" />
-                             <br/>
-                             <span class="accountFont">신부측 혼주</span>
-                             <br/>
-                             <img src="img/icon/family.png" width="50px" height="50px" />&nbsp;&nbsp; 
-                             
-                             신한 <span id="brideParentAccountNum">33333333333</span>조은정
-                             <button type="button" class="account_copy" data-clipboard-target="#brideParentAccountNum">
-                                 복사
-                             </button>
-                               
+                                <span class="accountFont">신 부</span>
+                                <br />
+                                <br />
+                                <img src="img/icon/bride.png" width="50px" height="50px" />&nbsp;&nbsp;
+
+                                신한 <span id="brideAccountNum">22222222222</span> 권지은
+                                <button type="button" class="account_copy" data-clipboard-target="#brideAccountNum">
+                                    복사
+                                </button>
+                                <hr class="cover-container" />
+                                <br />
+                                <span class="accountFont">신부측 혼주</span>
+                                <br />
+                                <img src="img/icon/family.png" width="50px" height="50px" />&nbsp;&nbsp;
+
+                                신한 <span id="brideParentAccountNum">33333333333</span>조은정
+                                <button type="button" class="account_copy"
+                                    data-clipboard-target="#brideParentAccountNum">
+                                    복사
+                                </button>
+
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">
@@ -606,7 +933,7 @@
                 <p class="wow fadeInUp section5-title-custom section5-sub-custom" style="margin-top: 1.3em">
                     한서 ❤️ 지은 결혼식이 <span id="d-day"></span>일 남았습니다.
                 </p>
-               
+
             </div>
             <div class="wow fadeInUp inner cover-container d-flex w-100 h-100 mx-auto flex-column">
                 <br /><br />
@@ -622,7 +949,7 @@
                 <br />
                 <div id="map" class="wow fadeInUp" style="width: 100%; height: 350px"></div>
 
-            
+
                 <div class="wow fadeInUp section6-location p-3">
                     <div class="accordion" id="accordionExample">
                         <div class="card">
@@ -702,7 +1029,7 @@
             </footer>
         </main>
     </div>
-  <script>
+    <script>
 
         var clipboard = new ClipboardJS('.account_copy');
         clipboard.on('success', function () {
@@ -712,319 +1039,14 @@
             alert('Fail');
         });
 
-  </script>
+    </script>
 
-<!-- 
-<div class="ww-section bg-pinktone" id="gallery">
-    <div class="ww-photo-gallery pb-5">
-      <div class="container">
-        <h2
-          class="h1 text-center pb-4 ww-title"
-          style="font-family: 'Noto Serif KR', serif"
-        >
-          포토 갤러리
-        </h2>
-        <div class="ww-gallery">
-          <div class="card-columns">
-            <div
-              class="pswp"
-              tabindex="-1"
-              role="dialog"
-              aria-hidden="true"
-            >
-              <div class="pswp__bg"></div>
+    
 
-              <div class="pswp__scroll-wrap">
-                <div class="pswp__container">
-                  <div class="pswp__item"></div>
-                  <div class="pswp__item"></div>
-                  <div class="pswp__item"></div>
-                </div>
-
-                <div class="pswp__ui pswp__ui--hidden">
-                  <div class="pswp__top-bar">
-                    <div class="pswp__counter"></div>
-
-                    <button
-                      class="pswp__button pswp__button--close"
-                      title="Close (Esc)"
-                    ></button>
-
-                    <button
-                      class="pswp__button pswp__button--zoom"
-                      title="Zoom in/out"
-                    ></button>
-
-                    <div class="pswp__preloader">
-                      <div class="pswp__preloader__icn">
-                        <div class="pswp__preloader__cut">
-                          <div class="pswp__preloader__donut"></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div
-                    class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"
-                  >
-                    <div class="pswp__share-tooltip"></div>
-                  </div>
-
-                  <button
-                    class="pswp__button pswp__button--arrow--left"
-                    title="Previous (arrow left)"
-                  ></button>
-
-                  <button
-                    class="pswp__button pswp__button--arrow--right"
-                    title="Next (arrow right)"
-                  ></button>
-
-                  <div class="pswp__caption">
-                    <div class="pswp__caption__center"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-         
-
-          <div class="gallery-wrapper">
-            <div class="gallery" data-is-empty="false" data-columns="3">
-              <figure class="gallery__item gallery__item--11">
-                <a href="img/wedding_pick/1.jpg" data-size="2487x3855"
-                  ><img
-                    loading="lazy"
-                    src="img/wedding_pick/1.jpg"
-                    alt="gallery1"
-                    width="2487"
-                    height="3855"
-                /></a>
-              </figure>
-
-              <figure class="gallery__item gallery__item--1D">
-                <a href="images/gallery4.jpg" data-size="720x1080"
-                  ><img
-                    loading="lazy"
-                    src="images/gallery4.jpg"
-                    alt="gallery4"
-                    width="720"
-                    height="1080"
-                /></a>
-              </figure>
-
-              <figure class="gallery__item gallery__item--7D">
-                <a
-                  href="images/mui/R_220329002_3644.resize.jpg"
-                  data-size="959x1440"
-                  ><img
-                    loading="lazy"
-                    src="images/mui/R_220329002_3644.resize.jpg"
-                    alt="2x2"
-                    width="959"
-                    height="1440"
-                /></a>
-              </figure>
-
-              <figure class="gallery__item gallery__item--H7">
-                <a
-                  href="images/mui/R_220329002_3153-1.jpg"
-                  data-size="600x900"
-                  ><img
-                    loading="lazy"
-                    src="images/mui/R_220329002_3153-1.jpg"
-                    alt="2x2"
-                    width="600"
-                    height="900"
-                /></a>
-              </figure>
-
-              <figure class="gallery__item gallery__item--D1">
-                <a
-                  href="images/mui/R_220329002_0925.resize.jpg"
-                  data-size="600x900"
-                  ><img
-                    loading="lazy"
-                    src="images/mui/R_220329002_0925.resize.jpg"
-                    alt="2x2"
-                    width="600"
-                    height="900"
-                /></a>
-              </figure>
-
-              <figure class="gallery__item gallery__item--D8">
-                <a
-                  href="images/mui/R_220329002_4049.resize.jpg"
-                  data-size="600x900"
-                  ><img
-                    loading="lazy"
-                    src="images/mui/R_220329002_4049.resize.jpg"
-                    alt="2x2"
-                    width="600"
-                    height="900"
-                /></a>
-              </figure>
-
-              <figure class="gallery__item gallery__item--HD">
-                <a href="images/gallery5.jpg" data-size="719x1080"
-                  ><img
-                    loading="lazy"
-                    src="images/gallery5.jpg"
-                    alt="2x2"
-                    width="719"
-                    height="1080"
-                /></a>
-              </figure>
-              <figure class="gallery__item gallery__item--L1">
-                <a
-                  href="images/mui/R_220329002_2284.resize.jpg"
-                  data-size="720x1080"
-                  ><img
-                    loading="lazy"
-                    src="images/mui/R_220329002_2284.resize.jpg"
-                    alt="2x2"
-                    width="720"
-                    height="1080"
-                /></a>
-              </figure>
-
-              <figure class="gallery__item gallery__item--L8">
-                <a
-                  href="images/mui/R_220329002_2697-1.jpg"
-                  data-size="600x900"
-                  ><img
-                    loading="lazy"
-                    src="images/mui/R_220329002_2697-1.jpg"
-                    alt="2x2"
-                    width="600"
-                    height="900"
-                /></a>
-              </figure>
-
-              <figure class="gallery__item gallery__item--R1">
-                <a
-                  href="images/mui/R_220329002_0150-1.jpg"
-                  data-size="600x900"
-                  ><img
-                    loading="lazy"
-                    src="images/mui/R_220329002_0150-1.jpg"
-                    alt="2x2"
-                    width="600"
-                    height="900"
-                /></a>
-              </figure>
-
-              <figure class="gallery__item gallery__item--Y8">
-                <a
-                  href="images/mui/R_220329002_2360.resize.jpg"
-                  data-size="600x900"
-                  ><img
-                    loading="lazy"
-                    src="images/mui/R_220329002_2360.resize.jpg"
-                    alt="2x2"
-                    width="600"
-                    height="900"
-                /></a>
-              </figure>
-
-              <figure class="gallery__item gallery__item--YE">
-                <a
-                  href="images/mui/R_220329002_4356.resize.jpg"
-                  data-size="600x900"
-                  ><img
-                    loading="lazy"
-                    src="images/mui/R_220329002_4356.resize.jpg"
-                    alt="2x2"
-                    width="600"
-                    height="900"
-                /></a>
-              </figure>
-
-              <figure class="gallery__item gallery__item--Z1">
-                <a
-                  href="images/mui/R_220329002_1423.resize.jpg"
-                  data-size="600x400"
-                  ><img
-                    loading="lazy"
-                    src="images/mui/R_220329002_1423.resize.jpg"
-                    alt="2x2"
-                    width="600"
-                    height="400"
-                /></a>
-              </figure>
-            </div>
-          </div>
-
-          <div
-            class="pswp"
-            tabindex="-1"
-            role="dialog"
-            aria-hidden="true"
-          >
-            <div class="pswp__bg"></div>
-            <div class="pswp__scroll-wrap">
-              <div class="pswp__container">
-                <div class="pswp__item"></div>
-                <div class="pswp__item"></div>
-                <div class="pswp__item"></div>
-              </div>
-              <div class="pswp__ui pswp__ui--hidden">
-                <div class="pswp__top-bar">
-                  <div class="pswp__counter"></div>
-                  <button
-                    class="pswp__button pswp__button--close"
-                    title="Close (Esc)"
-                  ></button
-                  ><button
-                    class="pswp__button pswp__button--share"
-                    title="Share"
-                  ></button
-                  ><button
-                    class="pswp__button pswp__button--fs"
-                    title="Toggle fullscreen"
-                  ></button
-                  ><button
-                    class="pswp__button pswp__button--zoom"
-                    title="Zoom in/out"
-                  ></button>
-                  <div class="pswp__preloader">
-                    <div class="pswp__preloader__icn">
-                      <div class="pswp__preloader__cut">
-                        <div class="pswp__preloader__donut"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"
-                >
-                  <div class="pswp__share-tooltip"></div>
-                </div>
-                <button
-                  class="pswp__button pswp__button--arrow--left"
-                  title="Previous (arrow left)"
-                ></button
-                ><button
-                  class="pswp__button pswp__button--arrow--right"
-                  title="Next (arrow right)"
-                ></button>
-                <div class="pswp__caption">
-                  <div class="pswp__caption__center"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-       
-
-        </div>
-      </div>
-    </div>
-  </div> -->
-     <!---->
-          <!-- <script defer="defer" src="js/photoswipe.min.js"></script>
+    
+    <script defer="defer" src="js/photoswipe.min.js"></script>
           <script defer="defer" src="js/photoswipe-ui-default.min.js"></script>
-          <script defer="defer" src="js/gallery.js"></script> -->
+          <script defer="defer" src="js/gallery.js"></script>
 </body>
 
 </html>

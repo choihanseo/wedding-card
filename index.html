@@ -77,13 +77,18 @@
 
 
         $(document).ready(function () {
-            let date = new Date(2022, 9, 25);
+            //let date = new Date(2022, 9, 25);
+            let date = new Date("2022-09-26T00:00:00+0900");
             let currentDate = new Date();
+            // debugger
+            // let result = date - currentDate;
 
-            let result = date - currentDate;
-            let misec = 24 * 60 * 60 * 1000;
+            // let misec = 24 * 60 * 60 * 1000;
 
-            result = result <= 0 ? 0 : parseInt(result / misec) + 1;
+            // result = result <= 0 ? 0 : parseInt(result / misec) + 1;
+
+            var distance = date.getTime() - currentDate.getTime()
+            result = Math.floor(distance/(1000*60*60*24));
 
             $("#d-day").html(result);
 
